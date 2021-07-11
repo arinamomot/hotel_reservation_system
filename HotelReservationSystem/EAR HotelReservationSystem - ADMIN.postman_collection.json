@@ -1,0 +1,260 @@
+{
+	"info": {
+		"_postman_id": "ca231984-2dd9-43f6-ba59-4e361b9cba1e",
+		"name": "EAR HotelReservationSystem - ADMIN",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "View reservations to approve",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "admin@admin.cz",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/hrs/reservations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hrs",
+						"reservations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Approve a reservation",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "admin@admin.cz",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/hrs/reservations/202/approve",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hrs",
+						"reservations",
+						"202",
+						"approve"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deny a reservation",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "admin@admin.cz",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/hrs/reservations/203/deny",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hrs",
+						"reservations",
+						"203",
+						"deny"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new admin",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "admin@admin.cz",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"Osel\",\r\n  \"lastName\": \"Velbloud\",\r\n  \"email\": \"velbloud@admin.cz\",\r\n  \"password\": 12345,\r\n  \"disabled\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/hrs/admin/addAdmin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hrs",
+						"admin",
+						"addAdmin"
+					]
+				},
+				"description": "asdasd"
+			},
+			"response": []
+		},
+		{
+			"name": "View all users",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "admin@admin.cz",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/hrs/admin/allUsers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hrs",
+						"admin",
+						"allUsers"
+					]
+				},
+				"description": "asdasd"
+			},
+			"response": []
+		},
+		{
+			"name": "Add new hotel",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "admin@admin.cz",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Velbloudův hotel\",\r\n  \"disabled\": false,\r\n  \"address\": {\r\n    \"city\": \"Praha\",\r\n    \"country\": \"Czech Republic\",\r\n    \"postcode\": 12345,\r\n    \"street\": \"Velbloudova\",\r\n    \"houseNumber\": 101\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/hrs/hotels",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hrs",
+						"hotels"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "username",
+				"value": "admin@admin.cz",
+				"type": "string"
+			},
+			{
+				"key": "password",
+				"value": "12345",
+				"type": "string"
+			}
+		]
+	}
+}
